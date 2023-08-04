@@ -140,6 +140,7 @@ body {
 }
 .box6 {
   background: #fff;
+  margin-top: 1rem;
 }
 .box6 .item61 {
   display: flex;
@@ -171,4 +172,82 @@ body {
 }
 .box6 ul li a {
   color: #333;
+}
+.box7 {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 5rem;
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+}
+.box7 > img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.box7 .item7l {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-left: 2rem;
+}
+.box7 .item7l div img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+.box7 .item7l div p {
+  color: #fff;
+}
+.box7 .item7l div p:nth-of-type(1) {
+  font-size: 2rem;
+}
+.box7 .item7r {
+  background: #ff8a00;
+  flex: 4;
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+.box7 .item7r a {
+  color: #fff;
+  line-height: 5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.box8 {
+  background: #333;
+  padding: 2rem;
+  color: #939494;
+}
+.box8 h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #999;
+}
+.box8 h2 a {
+  color: #939494;
+}
+.box8 > div {
+  padding-top: 2rem;
+  font-size: 1.4rem;
+}
+.box8 > div ul {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.box8 > div ul li {
+  width: 17rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box8 > div ul li img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+.box8 > div p {
+  text-align: center;
 }
