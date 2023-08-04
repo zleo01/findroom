@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+    // overflow: hidden;
+}
+
+// 导航条
+.box1 {
+    width: 100%;
+    height: 5rem;
+    background: #FF8A00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+
+        img {
+            width: 12rem;
+            height: 4rem;
+        }
+    }
+
+    div {
+        a {
+            img {
+                width: 2.7rem;
+                height: 3.4rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+.box2 {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background: #fff;
+
+    a {
+        color: #333;
+
+        &:nth-of-type(1) {
+            font-weight: 600;
+        }
+    }
+}
+
+.box3 {
+    padding: 1rem 1.5rem;
+
+    div {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        background: #fff;
+        padding: 1rem;
+        border: 1px solid #cccccc;
+
+        input {
+            width: 80%;
+            height: 2rem;
+            border: none;
+            outline: none;
+        }
+
+        span {
+            margin-left: 1rem;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+.box4 {
+    width: 100%;
+    z-index: 5;
+
+    &>ul {
+        display: flex;
+        justify-content: space-around;
+        background: #fff;
+        padding: 1rem;
+
+        li {
+            a {
+                font-size: 2rem;
+                color: #333;
+                font-weight: 600;
+            }
+
+            span {
+                margin-left: 1rem;
+                border-top: 5px solid #ccc;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 5px solid transparent;
+            }
+
+            .sp {
+                margin-left: 1rem;
+                position: relative;
+                bottom: 2rem;
+                border-top: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid #ff8a00;
+                border-left: 5px solid transparent;
+            }
+        }
+    }
+
+    .item41 {
+        display: none;
+    }
+
+    .item42 {
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: flex-start;
+
+        div {
+            width: 9.5rem;
+            float: left;
+            font-size: 2rem;
+            height: 31.5rem;
+            background: #e0e3e3;
+
+            p {
+                font-weight: 600;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .pc {
+                background: #fff;
+                color: #FF8A00;
+            }
+        }
+
+        ul {
+            float: left;
+            width: 28rem;
+            display: flex;
+            flex-flow: row wrap;
+            background: #fff;
+
+            li {
+                text-align: center;
+                width: 12.5rem;
+                height: 4.5rem;
+                line-height: 4.5rem;
+                font-size: 1.6rem;
+            }
+
+            .cs {
+                color: #FF8A00;
+            }
+        }
+    }
+
+    .item43 {
+        background: #fff;
+
+        ul {
+            padding-bottom: 1rem;
+
+            li {
+                height: 4rem;
+                line-height: 4rem;
+                border-bottom: 1px solid #ccc;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                font-size: 1.4rem;
+                color: #5a5959;
+
+                &:nth-last-child(1) {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .item44 {
+        background: #fff;
+
+        ul {
+            padding-bottom: 1rem;
+
+            li {
+                height: 4rem;
+                line-height: 4rem;
+                border-bottom: 1px solid #ccc;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                font-size: 1.4rem;
+                color: #5a5959;
+
+                &:nth-last-child(1) {
+                    border: none;
+                }
+
+                span {
+                    width: 1.4rem;
+                    height: 1.5rem;
+                    float: right;
+                    margin-top: 1.2rem;
+                    margin-right: 2rem;
+                    border: 1px solid #c5c3c3;
+                }
+
+                .cxz {
+                    border: 1px solid #ff8a00;
+                    background: url(../image/SecondHandList/ok.png) center center no-repeat;
+                }
+
+                &:nth-last-child(1) {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: #FF8A00;
+                    text-align: center;
+                    // padding-bottom: 1rem;
+                    // line-height: ;
+                }
+
+            }
+        }
+    }
+
+    .item45 {
+        background: #fff;
+        padding-bottom: 2rem;
+
+        div {
+            padding: 0 2rem;
+
+            h3 {
+                padding: 2rem 0 1.2rem 0;
+                font-size: 1.8rem;
+                padding-left: 2rem;
+            }
+
+            ul {
+                padding: 0 2rem;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #cccccc;
+
+                li {
+                    text-align: center;
+                    width: 20%;
+                    height: 2.5rem;
+                    margin-bottom: 1rem;
+                    line-height: 2.5rem;
+                    font-size: 1.4rem;
+                    border: 1px solid #cccccc;
+                    padding: .3rem;
+                }
+            }
+
+            p {
+                height: 5rem;
+                line-height: 5rem;
+                text-align: center;
+                font-size: 1.6rem;
+
+                &:nth-of-type(2) {
+                    color: #fff;
+                    background: #ff8a00;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+// 蒙版
+.box5 {
+    width: 100%;
+    height: 158%;
+    position: absolute;
+    top: 0rem;
+    z-index: 3;
+    display: none;
+    background: rgba(232, 226, 226, .6)
+}
+
+.box6 {
+    ul {
+        padding: 0 2rem;
+
+        li {
+            padding: 2rem 0;
+            border-bottom: 1px solid #FF8A00;
+
+            &:nth-last-child(1) {
+                border: none;
+            }
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                color: #000;
+
+                img {
+                    width: 9.5rem;
+                    height: 9.5rem;
+                }
+
+                &>div {
+                    width: 21rem;
+                    font-size: 1.4rem;
+
+                    h2 {
+                        font-size: 1.6rem;
+                        margin-bottom: 1rem;
+                    }
+
+
+                    div {
+                        margin-top: 1rem;
+
+                        span {
+                            &:nth-of-type(1) {
+                                color: #6da719;
+                                float: left;
+                                padding: 0 .5rem;
+                                border: 1px solid #6da719;
+                                border-radius: 2px;
+                            }
+
+                            &:nth-of-type(2) {
+                                color: #ff8a00;
+                                float: right;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+// 底部
+
+.box8 {
+    background: #333;
+    padding: 2rem;
+    color: #939494;
+
+    h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #999;
+
+        a {
+            color: #939494;
+        }
+    }
+
+    &>div {
+        padding-top: 2rem;
+        font-size: 1.4rem;
+
+        ul {
+            display: flex;
+            margin-bottom: 2rem;
+
+            li {
+                width: 17rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
