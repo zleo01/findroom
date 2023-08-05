@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的登录页面</title>
+    <link rel="stylesheet" href="./css/myLogin.css">
+    <script src="./js/rem.js"></script>
+    <script src="./js/touch.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="box1">
+        <a href="#">
+            <img src="./image/index/logo.jpg" alt="">
+        </a>
+        <div>
+            <a href="./my.html">
+                <img src="./image/index/my.jpg" alt="">
+            </a>
+            <a href="#">
+                <img src="./image/index/xiazai.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 首页>我的>登录 -->
+    <div class="box2">
+        <span>首页</span> > 我的
+    </div>
+
+    <!-- 头像 用户名 -->
+    <div class="my">
+        <!-- 背景色 -->
+        <img src="./image/my/bg2.png" alt="">
+
+        <div class="tou">
+            <img src="./image/my/urse2.png" alt="">
+            <p class="my-name">欢迎您，&nbsp;&nbsp;<span class="username"></span></p>
+        </div>
+    </div>
+
+    <!-- 我关注的房源 部分 -->
+    <ul class="list">
+        <li> <a href=""> <img src="./image/my/icon1.png" alt=""><span>我关注的房源</span></a></li>
+        <li> <a href="./myHouse.html"> <img src="./image/my/icon2.png" alt="">我关注的小区</a></li>
+        <li> <a href=""> <img src="./image/my/icon3.png" alt="">我关注的新房</a></li>
+        <li> <a href=""> <img src="./image/my/icon4.png" alt="">我的看房记录</a></li>
+    </ul>
+</body>
+
+</html>
+
+<script>
+
+    var username = document.querySelector('.username')
+    window.onload = function () {
+        if (sessionStorage.getItem('uslogin')) {
+            username.innerHTML = localStorage.getItem('usphone')
+            sessionStorage.removeItem('uslogin')
+        }
+    }
+
+
+</script>

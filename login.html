@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/rem.js"></script>
+    <script src="./js/touch.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="box1">
+        <a href="#">
+            <img src="./image/index/logo.jpg" alt="">
+        </a>
+        <div>
+            <a href="./my.html">
+                <img src="./image/index/my.jpg" alt="">
+            </a>
+            <a href="#">
+                <img src="./image/index/xiazai.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- 首页>我的>登录 -->
+    <div class="box2">
+        <span>首页</span> > 我的 > 登录
+
+    </div>
+
+    <!-- 普通登录 部分-->
+    <div class="putong">
+        <div class="left active">普通登录</div>
+        <div class="left">验证码快捷登录</div>
+    </div>
+
+    <!-- 登录信息填写 部分 -->
+    <div>
+        <!-- 普通登录 -->
+        <div class="xinxi">
+            <ul>
+                <li><input class="phonenum" type="text" placeholder="请输入手机号码"></li>
+                <li><input class="pwd" type="password" placeholder="请输入密码"></li>
+            </ul>
+            <!-- 立即登录 -->
+            <div class="liji">
+                <a class="liji-a" href="#">立即登录</a>
+            </div>
+        </div>
+
+        <!-- 验证码快捷登录 -->
+        <div class="xinxi">
+            <ul>
+                <li><input type="text" placeholder="请输入手机号码"><a class="yanzheng" href="#">发送验证码</a></li>
+                <li><input type="password" placeholder="请输入短信中的验证码"></li>
+            </ul>
+            <!-- 立即登录 -->
+            <div class="liji">
+                <a class="liji-a" href="./myLogin.html">验证并登录</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 立即注册 -->
+    <div class="small">
+        <a href="./register.html">立即注册</a>
+        <a href="./findPassword.html">忘记密码</a>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    // 普通登录 排他法
+    var left = document.getElementsByClassName('left')
+    var xinxi = document.getElementsByClassName('xinxi')
+
+    for (var i = 0; i < left.length; i++) {
+        left[i].setAttribute('index', i)
+
+        left[i].onclick = function () {
+            var ind = this.getAttribute('index')
+
+            for (j = 0; j < left.length; j++) {
+                left[j].classList.remove('active')
+                left[ind].classList.add('active')
+            }
+            for (k = 0; k < xinxi.length; k++) {
+                xinxi[k].style.display = 'none'
+                xinxi[ind].style.display = 'block'
+            }
+        }
+    }
+
+    //获取验证码
+    var yanzheng = document.querySelector('.yanzheng');
+
+    touch.on(yanzheng, 'tap', function () {
+        yanzheng.style.color = 'gray';
+        //按钮点击后禁用
+        // yanzheng.disable = true;
+        var num = 59;
+        var timer;
+        clearInterval(timer);//防抖
+
+        //设置计时器
+        timer = setInterval(function () {
+            // yanzheng.innerHTML = '' + num + '秒';
+            yanzheng.innerHTML = +num + '秒';
+            num--;
+            if (num < 0) {
+                // 秒数结束后按钮恢复
+                // yanzheng.disable = false;
+                yanzheng.style.color = 'black';
+                clearInterval(timer);
+                yanzheng.innerHTML = '重获取验证码'
+            }
+        }, 1000)
+    })
+
+    //判断登录
+    var phonenum = document.querySelector('.phonenum')
+    var pwd = document.querySelector('.pwd')
+    var liji = document.querySelector('.liji')
+
+    liji.onclick = function () {
+        var phonenum_ = phonenum.value
+        var pwd_ = pwd.value
+
+        var usphone = localStorage.getItem('usphone')
+        var uspwd = localStorage.getItem('uspwd')
+
+        if (phonenum_ == usphone && pwd_ == uspwd) {
+            location.href = './myLogin.html'
+            sessionStorage.setItem('uslogin', true)
+        }
+        else {
+            alert('请输入正确的手机号或密码')
+        }
+    }
+
+
+
+
+</script>

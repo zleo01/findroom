@@ -22,7 +22,7 @@
 function setRem() {
 
     var uiwidth = 375;
-    var clientWidth = document.documentElement.clientHeight || document.body.clientHeight;
+    var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
     var html = document.querySelector('html')
     html.style.fontSize = (clientWidth / uiwidth) * 10 + 'px';
 
