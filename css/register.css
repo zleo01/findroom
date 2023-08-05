@@ -50,6 +50,10 @@ body {
     font-weight: 600;
 }
 
+.box2>span>a {
+    color: black;
+}
+
 /* 注册信息填写 部分 */
 .xinxi {
     width: 100%;

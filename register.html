@@ -28,7 +28,7 @@
     </div>
     <!-- 首页>我的>登录 -->
     <div class="box2">
-        <span>首页</span> > 我的 > 注册
+        <span><a href="./index.html">首页</a></span> > 我的 > 注册
     </div>
     <!-- 登录信息填写 部分 -->
     <div>
@@ -135,6 +135,7 @@
             location.href = './login.html'
 
             localStorage.setItem('usphone', ipts[0].value)
+            localStorage.setItem('usnum', ipts[1].value)
             localStorage.setItem('uspwd', ipts[2].value)
 
             sessionStorage.setItem('uslogin', true);

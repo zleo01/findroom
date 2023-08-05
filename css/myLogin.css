@@ -48,6 +48,10 @@ body {
     font-weight: 600;
 }
 
+.box2>span>a {
+    color: black;
+}
+
 /* 头像 用户名 */
 .my {
     position: relative;

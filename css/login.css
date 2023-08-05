@@ -51,6 +51,10 @@ body {
     font-weight: 600;
 }
 
+.box2>span>a {
+    color: black;
+}
+
 /* 普通登录 */
 .putong {
     width: 100%;
@@ -139,21 +143,6 @@ body {
     line-height: 3.5rem;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 立即注册 */
 .small {

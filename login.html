@@ -29,7 +29,7 @@
 
     <!-- 首页>我的>登录 -->
     <div class="box2">
-        <span>首页</span> > 我的 > 登录
+        <span><a href="./index.html">首页</a></span> > 我的 > 登录
 
     </div>
 
@@ -56,12 +56,13 @@
         <!-- 验证码快捷登录 -->
         <div class="xinxi">
             <ul>
-                <li><input type="text" placeholder="请输入手机号码"><a class="yanzheng" href="#">发送验证码</a></li>
-                <li><input type="password" placeholder="请输入短信中的验证码"></li>
+                <li><input class="y_phonenum" type="text" placeholder="请输入手机号码"><a class="yanzheng" href="#">发送验证码</a>
+                </li>
+                <li><input class="y_pwd" type="password" placeholder="请输入短信中的验证码"></li>
             </ul>
             <!-- 立即登录 -->
-            <div class="liji">
-                <a class="liji-a" href="./myLogin.html">验证并登录</a>
+            <div class="liji y_liji">
+                <a class="liji-a " href="#">验证并登录</a>
             </div>
 
         </div>
@@ -114,6 +115,13 @@
         timer = setInterval(function () {
             // yanzheng.innerHTML = '' + num + '秒';
             yanzheng.innerHTML = +num + '秒';
+
+            // 在倒数第5秒左右弹出6位数的验证码
+            if (num === 55) {
+                setTimeout(function () {
+                    alert('验证码：' + 100866);
+                }, 1000); // 延迟1秒触发弹窗显示验证码
+            }
             num--;
             if (num < 0) {
                 // 秒数结束后按钮恢复
@@ -137,12 +145,35 @@
         var usphone = localStorage.getItem('usphone')
         var uspwd = localStorage.getItem('uspwd')
 
+        //如果登录时输入的手机号 等于 注册的手机号 && 登录时输入的密码 等于 注册的密码 页面跳转
         if (phonenum_ == usphone && pwd_ == uspwd) {
             location.href = './myLogin.html'
             sessionStorage.setItem('uslogin', true)
         }
         else {
             alert('请输入正确的手机号或密码')
+        }
+    }
+
+    //验证码判断登录
+    var yphonenum = document.querySelector('.y_phonenum')
+    var ypwd = document.querySelector('.y_pwd')
+    var yliji = document.querySelector('.y_liji')
+
+    yliji.onclick = function () {
+        var yphonenum_ = yphonenum.value
+        var ypwd_ = ypwd.value
+
+        var usphone = localStorage.getItem('usphone')
+        // var usnum = localStorage.getItem('usnum')
+
+        //如果登录时输入的手机号 等于 注册的手机号 && 登录时输入的验证码 等于 收到的验证码 页面跳转
+        if (yphonenum_ == usphone && ypwd_) {
+            location.href = './myLogin.html'
+            sessionStorage.setItem('uslogin', true)
+        }
+        else {
+            alert('请输入正确的手机号或验证码')
         }
     }
 

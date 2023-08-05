@@ -50,6 +50,10 @@ body {
     font-weight: 600;
 }
 
+.box2>span>a {
+    color: black;
+}
+
 /* 具体内容 */
 .contain {
     padding: 0 2rem;
