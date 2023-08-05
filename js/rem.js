@@ -20,7 +20,6 @@
 // 动态配置rem 
 // 默认1rem  10px
 function setRem() {
-
     var uiwidth = 375;
     var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
     var html = document.querySelector('html')

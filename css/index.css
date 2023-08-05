@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: #f5f5f5;
+}
+.box1 {
+  width: 100%;
+  height: 5rem;
+  background: #FF8A00;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.box1 a img {
+  width: 12rem;
+  height: 4rem;
+}
+.box1 div a img {
+  width: 2.7rem;
+  height: 3.4rem;
+  padding-left: 2rem;
+}
+.box2 {
+  width: 37.5rem;
+  height: 26rem;
+  background: url(../image/index/banner.png);
+  background-size: 100%;
+  position: relative;
+  top: 0rem;
+}
+.box2 div {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 30rem;
+  height: 3.5rem;
+  border-radius: 6px;
+  box-shadow: inset 3px 3px rgba(204, 204, 204, 0.39), 3px 3px rgba(204, 204, 204, 0.39);
+  background: #fff;
+  border: 2px solid #333;
+}
+.box2 div span img {
+  width: 2rem;
+  height: 2rem;
+}
+.box2 div input {
+  width: 24rem;
+  border: none;
+  padding-left: 2rem;
+  outline: none;
+}
+.box3 {
+  background: #FF8A00;
+  padding: 2rem 0;
+}
+.box3 ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.box3 ul li p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+}
+.box3 ul li img {
+  width: 7rem;
+  height: 7rem;
+}
+.box4 {
+  padding: 2rem 0;
+  background: #f5f5f5;
+}
+.box4 img {
+  width: 37.5rem;
+  height: 30rem;
+}
+.box5 h2 {
+  padding: 2rem;
+  font-size: 2rem;
+  color: #f5f5f5;
+  background: #FF8A00;
+}
+.box5 h2 span {
+  font-size: 1.2rem;
+}
+.box5 ul {
+  background: #fff;
+  padding: 0 2rem;
+}
+.box5 ul li {
+  padding: 2rem 0;
+  border-bottom: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+.box5 ul li img {
+  width: 9.5em;
+  height: 9.5rem;
+}
+.box5 ul li h3 {
+  font-size: 1.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.box5 ul li p {
+  font-size: 1.4rem;
+}
+.box5 ul li p:nth-of-type(1) {
+  padding: 0.5rem 0 1rem 0;
+}
+.box5 ul li p:nth-of-type(1) span {
+  float: right;
+  color: #ff8a00;
+}
+.box5 ul li p:nth-of-type(2) {
+  color: #8b8b8b;
+  padding: 0.5rem 0 1rem 0;
+}
+.box5 ul li p:nth-of-type(2) span {
+  float: right;
+}
+.box5 ul li p:nth-of-type(3) a {
+  color: #849aae;
+  background: #f4f7f9;
+  padding: 0.2rem 0.4rem;
+}
+.box5 ul li:nth-last-child(1) {
+  border: none;
+}
+.box6 {
+  background: #fff;
+  margin-top: 1rem;
+}
+.box6 .item61 {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #ff8a00;
+}
+.box6 .item61 a {
+  font-size: 1.8rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+.box6 .item61 a:nth-of-type(1) {
+  color: #ff8a00;
+  border-bottom: 1px solid #ff8a00;
+}
+.box6 .item61 a:nth-of-type(2) {
+  color: #666666;
+}
+.box6 ul {
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.box6 ul li {
+  width: 15rem;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+}
+.box6 ul li a {
+  color: #333;
+}
+.box7 {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 5rem;
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+}
+.box7 > img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.box7 .item7l {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-left: 2rem;
+}
+.box7 .item7l div img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 2rem;
+}
+.box7 .item7l div p {
+  color: #fff;
+}
+.box7 .item7l div p:nth-of-type(1) {
+  font-size: 2rem;
+}
+.box7 .item7r {
+  background: #ff8a00;
+  flex: 4;
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+.box7 .item7r a {
+  color: #fff;
+  line-height: 5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.box8 {
+  background: #333;
+  padding: 2rem;
+  color: #939494;
+}
+.box8 h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #999;
+}
+.box8 h2 a {
+  color: #939494;
+}
+.box8 > div {
+  padding-top: 2rem;
+  font-size: 1.4rem;
+}
+.box8 > div ul {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.box8 > div ul li {
+  width: 17rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box8 > div ul li img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+.box8 > div p {
+  text-align: center;
+}

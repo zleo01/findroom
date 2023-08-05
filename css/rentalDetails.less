@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+// 导航条
+.box1 {
+    width: 100%;
+    height: 5rem;
+    background: #FF8A00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+
+        img {
+            width: 12rem;
+            height: 4rem;
+        }
+    }
+
+    div {
+        a {
+            img {
+                width: 2.7rem;
+                height: 3.4rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+.box2 {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background: #fff;
+
+    a {
+        color: #333;
+
+        &:nth-of-type(1) {
+            font-weight: 600;
+        }
+    }
+}
+
+.box3 {
+    position: relative;
+    top: 0;
+
+    a {
+        img {
+            width: 100%;
+            height: 22rem;
+        }
+    }
+
+    div {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        width: 5.9rem;
+        height: 4.1rem;
+        color: #ffffff;
+        text-align: center;
+        line-height: 4.1rem;
+        border-radius: 10px 0 0 10px;
+        font-size: 1.6rem;
+    }
+}
+
+.box4 {
+    display: flex;
+    background: #f9f9f9;
+
+    h2 {
+        flex: 78;
+        line-height: 2.1rem;
+        padding: 1rem 0 1rem 1rem;
+        font-size: 2rem;
+    }
+
+    a {
+        flex: 22;
+        border-left: 1px solid #dcdcdc;
+        text-align: center;
+        background: url(../image/rentalList/xin.png) 2.6rem 1.7rem no-repeat;
+        background-size: 1.9rem 1.9rem;
+        padding-top: 3.8rem;
+    }
+}
+
+.box5 {
+    ul {
+        display: flex;
+        padding: 3rem 0;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+
+        li {
+            font-size: 1.4rem;
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #e2e2e2;
+
+            p {
+                &:nth-of-type(2) {
+                    color: #ff8a00;
+                    margin-top: .6rem;
+                }
+            }
+        }
+    }
+}
+
+.box6 {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 2rem;
+
+    ul {
+        li {
+            height: 5rem;
+            line-height: 5rem;
+            border-bottom: 1px solid #e5e5e5;
+
+            div {
+                display: inline-block;
+                width: 48%;
+            }
+        }
+    }
+}
+
+.box7 {
+    padding: 1rem;
+
+    div {
+        background: #fff;
+        margin-top: 1rem;
+
+        h2 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            height: 4.4rem;
+            line-height: 4.4rem;
+            color: #ff8a00;
+            background: url(../image/rentalList/right.png) 32rem center no-repeat;
+            background-size: .7rem 1.4rem;
+            padding: 1.6rem;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        p {
+            font-size: 1.4rem;
+            padding: 1rem;
+            line-height: 2rem;
+
+            span {
+                color: #de6843;
+            }
+        }
+
+        div {
+            padding: 1rem;
+
+            div {
+                font-size: 1.6rem;
+
+                border: 1px solid #dcdcdc;
+
+                h3 {
+                    padding: .5rem 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.box8 {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: .9rem;
+
+    .item81 {
+        flex: 63;
+        display: flex;
+        padding: 1rem;
+
+        img {
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-right: 2rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+
+    }
+
+    .item82 {
+        flex: 37;
+        display: flex;
+        margin-top: .5rem;
+
+        a {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3rem;
+
+            &:nth-of-type(1) {
+                color: #5dcb96;
+                background: url(../image/rentalList/icon1.png) 0 0 no-repeat;
+                background-size: 3rem 3rem;
+            }
+
+            &:nth-of-type(2) {
+                color: #5baede;
+                background: url(../image/rentalList/icon2.png) 0 0 no-repeat;
+                background-size: 3rem 3rem;
+            }
+        }
+    }
+}
+
+.box9 {
+    background: #333;
+    padding: 2rem;
+    color: #939494;
+
+    h2 {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #999;
+
+        a {
+            color: #939494;
+        }
+    }
+
+    &>div {
+        padding-top: 2rem;
+        font-size: 1.4rem;
+
+        ul {
+            display: flex;
+            margin-bottom: 2rem;
+
+            li {
+                width: 17rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
