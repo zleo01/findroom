@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: #f5f5f5;
+    font-size: 10px;
+}
+
+.box1 {
+    /* width: 100%; */
+    height: 5rem;
+    background: #FF8A00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box1 a img {
+    width: 12rem;
+    height: 4rem;
+}
+
+.box1 div a img {
+    width: 2.7rem;
+    height: 3.4rem;
+    padding-left: 2rem;
+}
+
+/* 首页>我的>登录 */
+.box2 {
+    /* width: 100%; */
+    height: 4rem;
+    background-color: white;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    text-indent: 2rem;
+    border-bottom: 1px solid rgb(187, 183, 183);
+}
+
+.box2>span {
+    font-weight: 600;
+}
+
+/* 具体内容 */
+.contain {
+    padding: 0 2rem;
+}
+
+.contain>li {
+    width: 100%;
+    list-style: none;
+    padding: 2rem 0;
+    border-bottom: 1px solid #FF8A00;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+
+.contain>li>img {
+    width: 9.4rem;
+    height: 9.4rem;
+    float: left;
+}
+
+.contain>li>.center {
+    width: 9.4rem;
+    height: 9.4rem;
+    float: left;
+    /* line-height: 2.5rem; */
+    margin: 0 20px;
+}
+
+.contain>li>.center>h2 {
+    margin-bottom: 10px;
+}
+
+.contain>li>.center>p {
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+}
+
+.contain>li>h2 {
+    color: #FF8A00;
+    float: left;
+}

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.head>.bg {
+    width: 100%;
+}
+
+.topbox {
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbox a {
+    display: block;
+    color: white;
+    font-size: 1.6rem;
+    padding-top: 3rem;
+}
+
+
+.topbox>a:nth-of-type(1) {
+    background: url(../image/my/urse.png) no-repeat center top;
+    background-size: 60%;
+}
+
+.topbox>a:nth-of-type(2) {
+    background: url(../image/my/down.png) no-repeat center top;
+    background-size: 60%;
+}
+
+/* 中间头像 */
+.head {
+    position: relative;
+
+}
+
+.head>.touxiang {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 登录 */
+.denglu {
+    display: block;
+    width: 8.5rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    line-height: 3.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* 我关注的房源 部分 */
+
+.list {
+    margin-top: 1rem;
+    padding: 0 2rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.list>li {
+    height: 3rem;
+    height: 5rem;
+    list-style: none;
+    border-bottom: 1px solid rgb(197, 193, 193);
+    padding: 1rem 0;
+    padding-left: 3rem;
+    background: url(../image/my/right.png) no-repeat center right;
+    background-size: .7rem 1.4rem;
+    /* background-color: pink; */
+    line-height: 5rem;
+    position: relative;
+}
+
+.list>li>a>img {
+    position: absolute;
+    top: 2.5rem;
+    left: 0.5rem;
+}
+
+.list>li>a {
+    display: block;
+    color: gray;
+    font-size: 1.5rem;
+}
+
+.list>li>a:hover {
+    background-color: gray;
+}
+
+.list>li>a>img {
+    width: 2rem;
+    width: 2rem;
+    margin-right: .5rem;
+}
