@@ -132,14 +132,14 @@ body {
 
 /* 发送验证码 */
 .yanzheng {
-    width: 8rem;
-    /* padding: 0 1rem; */
+    /* width: 8rem; */
+    padding: 0 2rem;
     height: 3.5rem;
     border: 1px solid rgb(195, 192, 192);
     position: absolute;
     top: .5rem;
     right: 1rem;
-    color: gray;
+    color: black;
     line-height: 3.5rem;
     text-align: center;
 }
@@ -159,4 +159,39 @@ body {
 
 .small>a:nth-of-type(2) {
     color: #666666;
+}
+
+
+.xinxi>ul>li:nth-of-type(1) {
+    position: relative;
+}
+
+/* 手机号 输入错误提示信息 */
+.tishi {
+    display: block;
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 1.3rem;
+    left: 12rem;
+    color: white;
+    display: none;
+    border-radius: 0.5rem;
+}
+
+.xinxi>ul>li:nth-of-type(2) {
+    position: relative;
+}
+
+/* 密码 输入错误提示信息 */
+.mima {
+    display: block;
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 1.3rem;
+    left: 12rem;
+    color: white;
+    display: none;
+    border-radius: 0.5rem;
 }

@@ -36,8 +36,8 @@
 
     <!-- 普通登录 部分-->
     <div class="putong">
-        <div class="left active">普通登录</div>
-        <div class="left">验证码快捷登录</div>
+        <div class="left active" id="l">普通登录</div>
+        <div class="left" id="r">验证码快捷登录</div>
     </div>
 
     <!-- 登录信息填写 部分 -->
@@ -57,9 +57,10 @@
         <!-- 验证码快捷登录 -->
         <div class="xinxi">
             <ul>
-                <li><input class="y_phonenum" type="text" placeholder="请输入手机号码"><a class="yanzheng" href="#">发送验证码</a>
+                <li><input class="y_phonenum" type="text" placeholder="请输入手机号码"><span class="tishi"></span><a
+                        class="yanzheng" href="#">发送验证码</a>
                 </li>
-                <li><input class="y_pwd" type="password" placeholder="请输入短信中的验证码"></li>
+                <li><input class="y_pwd" type="password" placeholder="请输入短信中的验证码"><span class="mima"></span></li>
             </ul>
             <!-- 立即登录 -->
             <div class="liji y_liji">
@@ -101,40 +102,112 @@
         }
     }
 
-    //获取验证码
-    var yanzheng = document.querySelector('.yanzheng');
+    // //获取验证码
+    // var yanzheng = document.querySelector('.yanzheng');
 
-    touch.on(yanzheng, 'tap', function () {
-        yanzheng.style.color = 'gray';
-        //按钮点击后禁用
-        // yanzheng.disable = true;
-        var num = 59;
-        var timer;
-        clearInterval(timer);//防抖
+    // touch.on(yanzheng, 'tap', function () {
+    //     yanzheng.style.color = 'gray';
+    //     //按钮点击后禁用
+    //     // yanzheng.disable = true;
+    //     var num = 59;
+    //     var timer;
+    //     clearInterval(timer);//防抖
 
-        //设置计时器
-        timer = setInterval(function () {
-            // yanzheng.innerHTML = '' + num + '秒';
-            yanzheng.innerHTML = +num + '秒';
+    //     //设置计时器
+    //     timer = setInterval(function () {
+    //         // yanzheng.innerHTML = '' + num + '秒';
+    //         yanzheng.innerHTML = +num + '秒';
 
-            // 在倒数第5秒左右弹出6位数的验证码
-            if (num === 55) {
-                setTimeout(function () {
-                    alert('验证码：' + 100866);
-                }, 1000); // 延迟1秒触发弹窗显示验证码
-            }
-            num--;
-            if (num < 0) {
-                // 秒数结束后按钮恢复
-                // yanzheng.disable = false;
-                yanzheng.style.color = 'black';
-                clearInterval(timer);
-                yanzheng.innerHTML = '重获取验证码'
-            }
-        }, 1000)
-    })
+    //         // 在倒数第5秒左右弹出6位数的验证码
+    //         if (num === 55) {
+    //             //     setTimeout(function () {
+    //             //         alert('验证码：' + 100866);
+    //             //     }, 1000); // 延迟1秒触发弹窗显示验证码
+    //             // }
 
-    //判断登录
+    //             //在倒数第10秒左右弹出6位数的验证码
+    //             var verificationCode = generateVerificationCode(6);
+    //             alert('验证码：' + verificationCode);
+    //         }
+    //         num--;
+    //         if (num < 0) {
+    //             // 秒数结束后按钮恢复
+    //             // yanzheng.disable = false;
+    //             yanzheng.style.color = 'black';
+    //             clearInterval(timer);
+    //             yanzheng.innerHTML = '重获取验证码'
+    //         }
+    //     }, 1000)
+    // })
+
+
+
+    // 手机号判断
+    var ipts = document.getElementsByTagName('input')
+    var span = document.querySelector('.tishi')
+    var mima = document.querySelector('.mima')
+    var verificationCode = generateVerificationCode(6);
+
+    ipts[2].onblur = function () {
+        var reg = /^1[3456789]\d{9}$/;
+        if (reg.test(ipts[2].value)) {
+
+            // 手机号输入正正确 获取验证码
+            var yanzheng = document.querySelector('.yanzheng');
+            touch.on(yanzheng, 'tap', function () {
+                yanzheng.style.color = 'gray';
+
+                var num = 59;
+                var timer;
+
+                clearInterval(timer);//防抖
+                //设置计时器
+                timer = setInterval(function () {
+                    yanzheng.innerHTML = +num + '秒后重发送';
+
+                    if (num === 58) {
+                        // 在倒数第10秒左右弹出6位数的验证码
+                        alert('验证码：' + verificationCode);
+                    }
+
+                    num--;
+
+                    if (num < 0) {
+                        yanzheng.style.color = 'black';
+                        clearInterval(timer);
+                        yanzheng.innerHTML = '重获取验证码'
+                    }
+                }, 1000)
+            });
+        }
+        else {
+            //输入错误，清空input
+            ipts[0].value = ''
+            //提示框
+            span.style.display = 'block'
+            span.innerHTML = '请输入正确的手机号码'
+            //提示框出现2s后消失
+            setTimeout(function () {
+                span.style.display = 'none'
+            }, 2000)
+        }
+    }
+
+    // 生成指定长度的随机验证码
+    function generateVerificationCode(length) {
+        var code = '';
+        var characters = '0123456789';
+
+        for (var i = 0; i < length; i++) {
+            code += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        return code;
+    }
+
+
+
+    //判断密码登录
     var phonenum = document.querySelector('.phonenum')
     var pwd = document.querySelector('.pwd')
     var liji = document.querySelector('.liji')
@@ -143,11 +216,16 @@
         var phonenum_ = phonenum.value
         var pwd_ = pwd.value
 
+        // var phoneNumber = ipts[0].value;
+        // var password = ipts[2].value;
+
         var usphone = localStorage.getItem('usphone')
         var uspwd = localStorage.getItem('uspwd')
+        console.log(ipts[2].value);
 
         //如果登录时输入的手机号 等于 注册的手机号 && 登录时输入的密码 等于 注册的密码 页面跳转
         if (phonenum_ == usphone && pwd_ == uspwd) {
+            alert('登录成功');
             location.href = './myLogin.html'
             sessionStorage.setItem('uslogin', true)
         }
@@ -155,6 +233,7 @@
             alert('请输入正确的手机号或密码')
         }
     }
+
 
     //验证码判断登录
     var yphonenum = document.querySelector('.y_phonenum')
@@ -166,10 +245,10 @@
         var ypwd_ = ypwd.value
 
         var usphone = localStorage.getItem('usphone')
-        // var usnum = localStorage.getItem('usnum')
+        var usnum = localStorage.getItem('usnum')
 
         //如果登录时输入的手机号 等于 注册的手机号 && 登录时输入的验证码 等于 收到的验证码 页面跳转
-        if (yphonenum_ == usphone && ypwd_) {
+        if (yphonenum_ == usphone && ypwd_ == verificationCode) {
             location.href = './myLogin.html'
             sessionStorage.setItem('uslogin', true)
         }
@@ -177,8 +256,5 @@
             alert('请输入正确的手机号或验证码')
         }
     }
-
-
-
 
 </script>

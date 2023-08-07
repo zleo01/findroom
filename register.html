@@ -28,7 +28,8 @@
     </div>
     <!-- 首页>我的>登录 -->
     <div class="box2">
-        <span><a href="./index.html">首页</a></span> > <a href="./my.html" style="font-weight: 500;color: black;">我的</a></span> > 注册
+        <span><a href="./index.html">首页</a></span> > <a href="./my.html"
+            style="font-weight: 500;color: black;">我的</a></span> > 注册
     </div>
     <!-- 登录信息填写 部分 -->
     <div>
@@ -56,6 +57,7 @@
     var ipts = document.getElementsByTagName('input')
     var span = document.querySelector('.tishi')
     var mima = document.querySelector('.mima')
+    var verificationCode = generateVerificationCode(6);
 
     ipts[0].onblur = function () {
         var reg = /^1[3456789]\d{9}$/;
@@ -72,14 +74,20 @@
                 clearInterval(timer);//防抖
                 //设置计时器
                 timer = setInterval(function () {
-                    yanzheng.innerHTML = +num + '秒';
+                    yanzheng.innerHTML = +num + '秒后重发送';
 
-                    // 在倒数第5秒左右弹出6位数的验证码
-                    if (num === 55) {
-                        setTimeout(function () {
-                            alert('验证码：' + 100866);
-                        }, 1000); // 延迟1秒触发弹窗显示验证码
+                    // // 在倒数第5秒左右弹出6位数的验证码
+                    // if (num === 55) {
+                    //     setTimeout(function () {
+                    //         alert('验证码：' + 100866);
+                    //     }, 1000); // 延迟1秒触发弹窗显示验证码
+                    // }
+
+                    if (num === 58) {
+                        // 在倒数第10秒左右弹出6位数的验证码
+                        alert('验证码：' + verificationCode);
                     }
+
                     num--;
 
                     if (num < 0) {
@@ -103,11 +111,24 @@
         }
     }
 
-    // 验证码判断
-    ipts[1].onblur = function () {
-        var reg = /100866/;
-        if (reg.test(ipts[1].value)) { }
+    // 生成指定长度的随机验证码
+    function generateVerificationCode(length) {
+        var code = '';
+        var characters = '0123456789';
+
+        for (var i = 0; i < length; i++) {
+            code += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+
+        return code;
     }
+
+
+    // // 验证码判断
+    // ipts[1].onblur = function () {
+    //     var reg = /100866/;
+    //     if (reg.test(ipts[1].value)) { }
+    // }
 
     //密码判断
     ipts[2].onblur = function () {
@@ -129,10 +150,17 @@
 
     //注册按钮
     var liji = document.querySelector('.liji-a')
-    console.log(liji);
+
     liji.onclick = function () {
-        if (ipts[0].value && ipts[1].value && ipts[2].value) {
-            location.href = './login.html'
+
+        if (ipts[0].value && ipts[1].value == verificationCode && ipts[2].value) {
+
+            if (localStorage.getItem('usphone')) {
+                alert('该手机号已经注册过')
+            } else {
+                location.href = './login.html'
+                alert('注册成功')
+            }
 
             localStorage.setItem('usphone', ipts[0].value)
             localStorage.setItem('usnum', ipts[1].value)
